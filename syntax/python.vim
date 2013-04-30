@@ -176,7 +176,7 @@ call pymode#Default('g:pymode_syntax_all', 1)
     if !pymode#Default('g:pymode_syntax_builtin_objs', g:pymode_syntax_all) || g:pymode_syntax_builtin_objs
         syn keyword pythonBuiltinObj True False Ellipsis None NotImplemented
         syn keyword pythonBuiltinObj __debug__ __doc__ __file__ __name__ __package__
-        syn keyword pythonBuiltinObj self
+        syn keyword pythonSelf self
     endif
 
     " Builtin functions
@@ -291,6 +291,7 @@ endif
     hi def link  pythonBinError	    Error
 
     hi def link  pythonBuiltinObj   Structure
+    hi def link  pythonSelf         Structure
     hi def link  pythonBuiltinFunc  Function
 
     hi def link  pythonExClass	    Structure
